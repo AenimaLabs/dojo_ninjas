@@ -3,7 +3,7 @@ class CreateNinjas < ActiveRecord::Migration[6.1]
     create_table :ninjas do |t|
       t.string :nombre
       t.string :apellido
-      t.reference :dojo
+      t.references :dojo, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -3,9 +3,9 @@
 one:
   nombre: MyString
   apellido: MyString
-  dojo: 
+  dojo: one
 
 two:
   nombre: MyString
   apellido: MyString
-  dojo: 
+  dojo: two
