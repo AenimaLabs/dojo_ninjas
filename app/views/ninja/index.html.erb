@@ -1,0 +1,23 @@
+<h1>Ninja#index</h1>
+<p>Find me in app/views/ninja/index.html.erb</p>
+
+<table>
+    <tr>
+        <th>Nombre</th>        
+        <th>Apellido</th>
+        <th>Dojo</th>
+        <th>Acciones</th>
+    </tr>
+        
+    <% @ninjas.each do |i| %>
+                   
+        
+    <tr>
+        <td><%=i.nombre%></td>
+        <td><%=i.apellido%></td>
+        <td><%=i.dojo_id%></td>
+        <td></td>
+    </tr>
+    <% end %>
+
+</table>

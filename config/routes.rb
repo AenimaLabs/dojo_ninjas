@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  #get 'ninja/index'
+  #get 'ninja/show'
+  #get 'ninja/new'
+  #get 'ninja/edit'
+  #get 'ninja/delete'
+  #root 'dojo#index'   #127.0.0.1:3000  => va a mostrar la página INDEX
+
   # get 'dojo/index'
   # get 'dojo/show'
   # get 'dojo/new'
@@ -7,6 +15,12 @@ Rails.application.routes.draw do
 
   
     resources :dojo do
+      member do
+        get :delete
+      end
+    end
+
+    resources :ninja do
       member do
         get :delete
       end

@@ -1,6 +1,6 @@
-class DojoController < ApplicationController
+class NinjaController < ApplicationController
   def index
-    @dojos = Dojo.order(ciudad: :desc)
+    @ninjas = Ninja.order('apellido desc')
   end
 
   def show
