@@ -4,6 +4,7 @@ class DojoController < ApplicationController
   end
 
   def show
+    @dojo = Dojo.find(params[:id])
   end
 
   def new
