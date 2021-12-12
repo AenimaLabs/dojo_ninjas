@@ -1,5 +1,8 @@
 <%# <h1>Dojo#index</h1> %>
 <%# <p>Find me in app/views/dojo/index.html.erb</p> %>
+<br>
+<br>
+<%= link_to "Enlace 18-O", new_dojo_path, :class=> "action new"%>
 
 <table>
     <tr>
@@ -9,18 +12,21 @@
         <th>Acciones</th>
     </tr>
         
-    <% @dojos.each do |i| %>
-                   
-        
+    <% @dojos.each do |i| %>                  
     <tr>
         <td><%=i.nombre%></td>
         <td><%=i.ciudad%></td>
         <td><%=i.estado%></td>
-        <td></td>
+        <td><%= link_to "Mostrar", dojo_path(i), :class=> "action show"%> </td>
     </tr>
     <% end %>
 
 </table>
+<br>
+<!--<a href="dojo/new">Enlace 18-O</a> -->        <!--ESTÁTICO para el Public-->
+<!--<a href="<%= new_dojo_path%>">Enlace 18-O</a> -->
+<%# <%= link_to "Enlace 18-O", "dojo/new"%>     <!--DINÁMICO USAR RUBY-->
+<%= link_to "Enlace 18-O", new_dojo_path%> 
 
 <%# <%= 1+1 %> 
 <%# <% pais ='Chile'%>
